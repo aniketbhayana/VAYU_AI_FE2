@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import useDashboardData from '../hooks/useDashboardData';
 import DeviceSelector from '../components/DeviceSelector';
 import SensorDataCard from '../components/SensorDataCard';
@@ -15,18 +16,15 @@ import './Dashboard.css';
  * Displays all VAYU AI monitoring and control components
  */
 const Dashboard = () => {
+    const navigate = useNavigate();
     const [selectedDevice, setSelectedDevice] = useState(DEFAULT_DEVICE_ID);
     const { data, loading, error, notImplemented, refetch } = useDashboardData(selectedDevice);
 
     return (
-        <div className="dashboard">
-            <header className="dashboard-header">
-                <div className="header-content">
-                    <h1 className="dashboard-title">
-                        <span className="title-icon">🌬️</span>
-                        VAYU AI
-                        <span className="title-subtitle">Air Safety Dashboard</span>
-                    </h1>
+        <div className="dashboard container">
+            <header className="dashboard-subheader">
+                <div className="subheader-content">
+                    <h2 className="dashboard-page-title">Monitoring Dashboard</h2>
                     <DeviceSelector
                         selectedDevice={selectedDevice}
                         onDeviceChange={setSelectedDevice}

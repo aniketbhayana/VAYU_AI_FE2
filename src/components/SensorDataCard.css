@@ -1,5 +1,5 @@
 .sensor-data-card {
-    grid-column: span 2;
+    grid-column: span 12;
 }
 
 .card-header {
@@ -11,7 +11,7 @@
 
 .timestamp {
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--text-secondary);
     font-weight: 400;
 }
 
@@ -26,22 +26,21 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+    padding: 1.5rem;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    transition: all 0.2s ease;
 }
 
 .sensor-item:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.2);
+    background: #fafafa;
     transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
 }
 
 .sensor-icon {
     font-size: 2rem;
-    opacity: 0.8;
 }
 
 .sensor-info {
@@ -49,50 +48,42 @@
 }
 
 .sensor-name {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
     margin-bottom: 0.25rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
 }
 
 .sensor-value {
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
-    background: linear-gradient(135deg, currentColor, currentColor);
-    -webkit-background-clip: text;
-    background-clip: text;
+    color: var(--text-primary);
 }
 
 .sensor-unit {
     font-size: 0.9rem;
     font-weight: 400;
     margin-left: 0.25rem;
-    opacity: 0.8;
+    color: var(--text-secondary);
 }
 
 .sensor-status {
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.05em;
 }
 
 .device-info {
     padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--border-color);
 }
 
 .device-id {
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--text-secondary);
     font-family: 'Courier New', monospace;
-}
-
-.no-data {
-    text-align: center;
-    padding: 3rem;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 1rem;
 }

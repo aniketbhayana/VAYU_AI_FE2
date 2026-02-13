@@ -1,4 +1,19 @@
-/* Global Styles for VAYU AI Dashboard */
+/* Global Styles for VAYU AI Light Theme */
+
+:root {
+    --bg-primary: #ffffff;
+    --text-primary: #000000;
+    --text-secondary: #666666;
+    --accent-primary: #000000;
+    --accent-secondary: #8b5cf6;
+    /* Modern purple matching the image ring */
+    --border-color: #eeeeee;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-blur: 16px;
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.08);
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
 
 * {
     margin: 0;
@@ -7,112 +22,93 @@
 }
 
 body {
-    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #0f0f23;
-    color: #ffffff;
-    line-height: 1.6;
+    font-family: var(--font-main);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
-/* Card Styles */
-.card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 16px;
-    padding: 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-.card:hover {
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
-}
-
-.card-title {
-    font-size: 1.3rem;
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
     font-weight: 700;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: -0.02em;
 }
 
-/* Scrollbar Styles */
+/* Sharp Button Styles */
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    /* Very sharp as requested */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-solid {
+    background-color: var(--accent-primary);
+    color: #ffffff;
+}
+
+.btn-solid:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+.btn-outline:hover {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+/* Glass Cards (Light Theme) */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-soft);
+    border-radius: 4px;
+    /* Minimalist rounding */
+}
+
+/* Layout Utilities */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
+    background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #ccc;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-}
-
-/* Selection Styles */
-::selection {
-    background: rgba(102, 126, 234, 0.3);
-    color: #fff;
-}
-
-::-moz-selection {
-    background: rgba(102, 126, 234, 0.3);
-    color: #fff;
-}
-
-/* Utility Classes */
-.no-data {
-    text-align: center;
-    padding: 2rem;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 1rem;
-}
-
-/* Animations */
-@keyframes gradient-shift {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.gradient-animated {
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease infinite;
-}
-
-/* Focus Styles */
-button:focus,
-select:focus,
-input:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
-}
-
-/* Disabled States */
-button:disabled,
-select:disabled,
-input:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+    background: #999;
 }
