@@ -1,0 +1,53 @@
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.status-good .status-dot {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  box-shadow: 0 0 10px rgba(56, 239, 125, 0.5);
+}
+
+.status-moderate .status-dot {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 0 10px rgba(245, 87, 108, 0.5);
+}
+
+.status-unhealthy .status-dot {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  box-shadow: 0 0 10px rgba(254, 225, 64, 0.5);
+}
+
+.status-critical .status-dot {
+  background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);
+  box-shadow: 0 0 10px rgba(255, 8, 68, 0.5);
+}
+
+.status-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.status-indicator.pulse .status-dot {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}

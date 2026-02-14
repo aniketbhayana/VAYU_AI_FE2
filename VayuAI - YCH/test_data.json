@@ -1,0 +1,44 @@
+{
+    "clean_air": {
+        "device_id": "TEST_AI_001",
+        "pm25": 20.0,
+        "co2": 450.0,
+        "co": 5.0,
+        "voc": 80.0
+    },
+    "moderate_pollution": {
+        "device_id": "TEST_AI_002",
+        "pm25": 75.0,
+        "co2": 600.0,
+        "co": 25.0,
+        "voc": 180.0
+    },
+    "cigarette_smoke": {
+        "device_id": "TEST_AI_003",
+        "pm25": 120.0,
+        "co2": 550.0,
+        "co": 35.0,
+        "voc": 280.0
+    },
+    "vehicle_exhaust": {
+        "device_id": "TEST_AI_004",
+        "pm25": 150.0,
+        "co2": 850.0,
+        "co": 65.0,
+        "voc": 220.0
+    },
+    "cooking_smoke": {
+        "device_id": "TEST_AI_005",
+        "pm25": 180.0,
+        "co2": 650.0,
+        "co": 20.0,
+        "voc": 320.0
+    },
+    "chemical_fumes": {
+        "device_id": "TEST_AI_006",
+        "pm25": 40.0,
+        "co2": 480.0,
+        "co": 8.0,
+        "voc": 450.0
+    }
+}

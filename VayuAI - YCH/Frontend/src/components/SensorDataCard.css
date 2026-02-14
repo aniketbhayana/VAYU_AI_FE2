@@ -1,0 +1,89 @@
+.sensor-data-card {
+    grid-column: span 12;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.timestamp {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+.sensor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.sensor-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    transition: all 0.2s ease;
+}
+
+.sensor-item:hover {
+    background: #fafafa;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+}
+
+.sensor-icon {
+    font-size: 2rem;
+}
+
+.sensor-info {
+    flex: 1;
+}
+
+.sensor-name {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.sensor-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+}
+
+.sensor-unit {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-left: 0.25rem;
+    color: var(--text-secondary);
+}
+
+.sensor-status {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.device-info {
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.device-id {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-family: 'Courier New', monospace;
+}

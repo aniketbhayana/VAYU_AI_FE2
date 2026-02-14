@@ -1,0 +1,101 @@
+.smoke-prediction-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.risk-badge {
+    padding: 2rem;
+    background: var(--accent-primary);
+    color: #ffffff;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: transform 0.2s ease;
+}
+
+.risk-badge:hover {
+    transform: translateY(-2px);
+}
+
+.risk-icon {
+    font-size: 3rem;
+}
+
+.risk-info {
+    flex: 1;
+}
+
+.risk-level {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.01em;
+}
+
+.risk-confidence {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.prediction-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.detail-value {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.ai-reasoning {
+    padding: 1.5rem;
+    background: #fafafa;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+}
+
+.reasoning-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.ai-icon {
+    font-size: 1.25rem;
+}
+
+.reasoning-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.reasoning-text {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+}

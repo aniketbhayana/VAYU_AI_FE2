@@ -1,0 +1,105 @@
+.blockchain-logs-card {
+    grid-column: span 12;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logs-container {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-right: 0.5rem;
+}
+
+.log-item {
+    padding: 1.25rem;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--accent-primary);
+    border-radius: 2px;
+    transition: all 0.2s ease;
+}
+
+.log-item:hover {
+    background: #fafafa;
+    transform: translateX(4px);
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.event-type {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+}
+
+.log-timestamp {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-family: inherit;
+}
+
+.log-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.detail-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.detail-value {
+    font-size: 0.75rem;
+    color: var(--text-primary);
+    font-family: 'Courier New', monospace;
+}
+
+.hash-value {
+    background: #f1f1f1;
+    padding: 0.1rem 0.4rem;
+    border-radius: 2px;
+    font-size: 0.7rem;
+}
+
+.verified-badge {
+    padding: 0.25rem 0.75rem;
+    background: #f0fdf4;
+    color: #16a34a;
+    border: 1px solid #dcfce7;
+    border-radius: 2px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.data-summary {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.5rem;
+    background: #fafafa;
+    border-radius: 2px;
+    margin-top: 0.75rem;
+}
+
+.data-content {
+    background: #1a1a1a;
+    color: #00ff00;
+    /* Neon/Matrix feel for data remains in light theme as a focus element */
+    padding: 1rem;
+    border-radius: 2px;
+    font-size: 0.75rem;
+    font-family: 'Courier New', monospace;
+}

@@ -1,0 +1,182 @@
+.dashboard {
+    padding-top: 2rem;
+    min-height: calc(100vh - 80px);
+}
+
+.dashboard-subheader {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.subheader-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-page-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+/* Status Indicator (Global) */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-dot.pulsing {
+    background-color: var(--accent-secondary);
+    box-shadow: 0 0 10px var(--accent-secondary);
+}
+
+/* Empty/Error States */
+.loading-state,
+.error-state {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: var(--bg-primary);
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(0, 0, 0, 0.05);
+    border-top-color: var(--accent-primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 1.5rem;
+}
+
+.dashboard {
+    padding-top: 2rem;
+    min-height: calc(100vh - 80px);
+}
+
+.dashboard-subheader {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.subheader-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-page-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+/* Status Indicator (Global) */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-dot.pulsing {
+    background-color: var(--accent-secondary);
+    box-shadow: 0 0 10px var(--accent-secondary);
+}
+
+/* Empty/Error States */
+.loading-state,
+.error-state {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: var(--bg-primary);
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(0, 0, 0, 0.05);
+    border-top-color: var(--accent-primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 1.5rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Card Styles for AirClassificationCard, SensorDataCard, SmokePredictionCard */
+.sensor-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #fcfcfc;
+    /* Light background */
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+}
+
+.classification-badge {
+    padding: 1.5rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    /* Soft shadow */
+}
+
+.dashboard-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+}
+
+.dashboard-footer p {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+}
+
+.footer-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
+/* Responsive Grid */
+@media (max-width: 1200px) {
+    .dashboard-grid>div {
+        grid-column: span 12 !important;
+    }
+}

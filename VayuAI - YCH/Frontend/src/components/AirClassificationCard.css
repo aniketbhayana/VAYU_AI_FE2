@@ -1,0 +1,75 @@
+.air-classification-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.classification-badge {
+    padding: 1.5rem;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.classification-badge:hover {
+    background: #fafafa;
+    transform: translateY(-2px);
+}
+
+.air-icon {
+    font-size: 3.5rem;
+}
+
+.air-info {
+    flex: 1;
+}
+
+.air-type {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.air-confidence {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.ai-reasoning {
+    padding: 1.25rem;
+    background: #fdfdfd;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+}
+
+.reasoning-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.ai-icon {
+    font-size: 1.5rem;
+}
+
+.reasoning-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.reasoning-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+}
