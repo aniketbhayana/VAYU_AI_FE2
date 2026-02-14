@@ -10,7 +10,7 @@ const LandingPage = () => {
         <div className="landing-page">
             <section className="hero-section">
                 {/* Premium Circular Discs Background */}
-                <CircularDiscs count={40} />
+                <CircularDiscs count={18} />
 
                 <div className="container">
                     <div className="hero-content">

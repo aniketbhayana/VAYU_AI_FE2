@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import './CircularDiscs.css';
 
-const CircularDiscs = ({ count = 40 }) => {
+const CircularDiscs = ({ count = 18 }) => {
     const discs = useMemo(() => {
         return Array.from({ length: count }).map((_, i) => {
             // Symmetrical circular array (stack)
