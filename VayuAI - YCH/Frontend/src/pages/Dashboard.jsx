@@ -8,6 +8,7 @@ import AirClassificationCard from '../components/AirClassificationCard';
 import FaultDetectionCard from '../components/FaultDetectionCard';
 import FanControlCard from '../components/FanControlCard';
 import BlockchainLogsCard from '../components/BlockchainLogsCard';
+import HistoricalChartsCard from '../components/HistoricalChartsCard';
 import { DEFAULT_DEVICE_ID } from '../utils/constants';
 import './Dashboard.css';
 
@@ -71,6 +72,11 @@ const Dashboard = () => {
                             onUpdate={refetch}
                         />
                         <BlockchainLogsCard logs={data?.recent_logs} />
+
+                        {/* Historical Charts - Full Width */}
+                        <div className="full-width-card">
+                            <HistoricalChartsCard deviceId={selectedDevice} />
+                        </div>
                     </div>
                 )}
             </main>

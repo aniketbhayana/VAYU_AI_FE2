@@ -174,6 +174,11 @@
     font-weight: 600;
 }
 
+/* Full Width Card for Historical Charts */
+.full-width-card {
+    grid-column: 1 / -1;
+}
+
 /* Responsive Grid */
 @media (max-width: 1200px) {
     .dashboard-grid>div {

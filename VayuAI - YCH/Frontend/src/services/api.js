@@ -119,6 +119,48 @@ const api = {
         }
     },
 
+    /**
+     * Get historical sensor data with time-based filtering
+     * @param {string} deviceId - Device identifier
+     * @param {number} hours - Time window in hours (1, 6, 24, 168)
+     */
+    getHistoricalData: async (deviceId, hours) => {
+        try {
+            const response = await apiClient.get(`/api/v1/sensor/history/${deviceId}?hours=${hours}`);
+            return { success: true, data: response.data };
+        } catch (error) {
+            console.warn(`Backend unreachable, generating mock historical data for ${hours}h`);
+
+            // Generate mock historical data
+            const mockReadings = [];
+            const now = Date.now();
+            const intervalMs = (hours * 3600000) / 50; // Generate ~50 data points
+
+            for (let i = 50; i >= 0; i--) {
+                const timestamp = new Date(now - (i * intervalMs));
+                mockReadings.push({
+                    device_id: deviceId,
+                    timestamp: timestamp.toISOString(),
+                    pm25: 10 + Math.random() * 30 + Math.sin(i / 5) * 10,
+                    co2: 400 + Math.random() * 300 + Math.sin(i / 3) * 100,
+                    co: 0.5 + Math.random() * 2 + Math.sin(i / 4) * 0.5,
+                    voc: 100 + Math.random() * 150 + Math.sin(i / 6) * 50
+                });
+            }
+
+            return {
+                success: true,
+                data: {
+                    device_id: deviceId,
+                    readings: mockReadings,
+                    time_range_hours: hours,
+                    total_readings: mockReadings.length
+                },
+                notImplemented: true
+            };
+        }
+    },
+
     // ============= CONTROL ROUTES =============
 
     /**
