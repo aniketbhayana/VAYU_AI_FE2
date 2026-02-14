@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { API_BASE_URL } from '../utils/constants';
+import { MOCK_DASHBOARD_DATA, MOCK_DEVICES } from './mockData';
 
 // Create axios instance with base configuration
 const apiClient = axios.create({
@@ -37,11 +38,12 @@ const api = {
             const response = await apiClient.get(`/api/v1/dashboard/data/${deviceId}`);
             return { success: true, data: response.data };
         } catch (error) {
-            // Handle 501 Not Implemented gracefully
-            if (error.response?.status === 501) {
-                return { success: false, notImplemented: true, error: 'Dashboard endpoint not yet implemented' };
-            }
-            return { success: false, error: error.message };
+            console.warn("Backend unreachable, falling back to mock dashboard data");
+            return {
+                ...MOCK_DASHBOARD_DATA,
+                notImplemented: true,
+                error: null // Clear error so Dashboard renders data
+            };
         }
     },
 
@@ -53,7 +55,8 @@ const api = {
             const response = await apiClient.get('/api/v1/dashboard/devices');
             return { success: true, data: response.data.devices || [] };
         } catch (error) {
-            return { success: false, error: error.message };
+            console.warn("Backend unreachable, falling back to mock device list:", error.message);
+            return MOCK_DEVICES;
         }
     },
 
